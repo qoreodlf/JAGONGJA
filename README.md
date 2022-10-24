@@ -19,12 +19,12 @@
 
 ## ERD
 * JGJUSER : 회원정보 테이블
-* WORKBOOK : 과목 별 연습문제 테이블
-* WBREPLY
-* BOARDLIKE
-* ODNOTE
+* WORKBOOK : 과목 별 연습문제(게시판) 테이블
+* WBREPLY : WORKBOOK 댓글 테이블
+* BOARDLIKE : WORKBOOK 추천 테이블 (유저아이디, 게시글번호로 중복추천제한)
+* ODNOTE : 오답노트 테이블(WORKBOOK 문제 오답 시 자동 추가)
 * EXLIST : 시험 과목 코드 테이블
-* EXLOCATION2
+* EXLOCATION2 : 시험 장소 테이블
 ![image](https://user-images.githubusercontent.com/105340836/197439949-3cb90d6f-db6d-4fca-847e-b51650f2ad53.png)
 
 ## 주요 개발 사함
@@ -37,12 +37,20 @@
   * MyBatis로 백엔드 서버와 연결 및 SQL Query 
   
 * AJAX 이용한 프론트, 백엔드 비동기 통신
-  * 댓글(작성, 수정, 삭제), 추천 기능 등 동적 처리
+  * 댓글(작성, 삭제), 추천 기능 등 동적 처리
   * 비밀번호 확인, 사용자 정보 중복 확인
+  * 시험장소 조회 시 데이터 전송
 
-* Open API 이용한 음악공유(게시판)
-  * Last.fm Music Discovery API 이용한 음원 정보 검색
-  * YouTube Iframe Player API 이용한 음원 동영상 재생
+* Open API 이용한 시험 정보 제공
+  * 공공데이터포탈 API 이용한 시험 정보(과목, 일정, 장소) 조회
+  * Kakao Maps API 이용한 지역 별 시험장소 조회 기능 구현
+  
+* Kakao Login API 이용한 회원가입, 로그인 기능 구현
+  * Kakao 로그인, 일반 로그인 회원 USERTYPE으로 구분
+
+* 시험 과목 별 연습문제 게시판 구현
+  * 시험 과목 코드 별 세션 분리
+  * 연습문제 오답 시 해당 문제 ODNOTE(오답노트) 테이블에 자동 추가
 
 ## 기능 구현
 * 게시판 작성 (음원 등록)
