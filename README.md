@@ -27,10 +27,10 @@
 * EXLOCATION2 : 시험 장소 테이블
 ![image](https://user-images.githubusercontent.com/105340836/197439949-3cb90d6f-db6d-4fca-847e-b51650f2ad53.png)
 
-## 주요 개발 사함
-* Spring Framework를 이용한 MVC패턴 백엔드 개발
-  * 카테고리 별 게시판 구현
-  * 회원가입, 로그인, 회원정보 변경 등 
+## 팀 내 담당 주요 개발 사항
+* Spring Framework를 이용한 백엔드 개발
+  * MVC패턴 프로젝트 구축
+  * 프로젝트에 필요한 백엔드 기능 구현
   
 * Oracle Database 이용한 DB 구축
   * DB 테이블 설계
@@ -46,22 +46,31 @@
   * Kakao Maps API 이용한 지역 별 시험장소 조회 기능 구현
   
 * Kakao Login API 이용한 회원가입, 로그인 기능 구현
-  * Kakao 로그인, 일반 로그인 회원 USERTYPE으로 구분
+  * Kakao 로그인, 일반 로그인 회원 회원정보 테이블의 USERTYPE으로 구분
 
 * 시험 과목 별 연습문제 게시판 구현
   * 시험 과목 코드 별 세션 분리
   * 연습문제 오답 시 해당 문제 ODNOTE(오답노트) 테이블에 자동 추가
 
 ## 기능 구현
-* 게시판 작성 (음원 등록)
-  * 아티스트와 음악제목을 검색하고 YOUTUBE URL을 추가합니다.
-
-![addex](https://user-images.githubusercontent.com/105340836/197394642-5d45e98f-8d06-4aa1-aa69-052581656f5f.gif)
-
-* 게시판
-  * 게시판 작성 시 등록한 YOUTUBE URL과 YouTube Iframe Player API를 활용하여 음원을 재생할 수 있습니다.
-  * 앨범 게시판의 경우 앨범 전체를 연속 재생할 수 있습니다. (트랙 종료 시 다음트랙 자동 재생)
-
-![albumplayex](https://user-images.githubusercontent.com/105340836/197396080-1633a66d-a607-4fa4-aea6-bc3cf0e96711.gif)
+* 시험장소 조회
+  * 지역 선택 후 시험장소를 조회하면 Kakao Maps API를 통해 시험장소를 조회할 수 있습니다.
+  
+![자공자 시험장소조회](https://user-images.githubusercontent.com/105340836/197484075-6ae3f384-243e-41a1-b277-46294df121b6.gif)
 
 
+
+* 연습문제 게시판
+  * 시험 과목 별 연습문제를 출제, 풀어볼 수 있습니다.
+  * 댓글, 추천 기능을 AJAX로 비동기 처리하여 구현하였습니다.
+  * 연습문제 오답 시 해당 문제가 오답노트에 자동 추가됩니다
+
+![자공자 문제](https://user-images.githubusercontent.com/105340836/197484136-70c166d8-fbac-42c0-9a56-a272a043f3f3.gif)
+
+* Kakao 로그인/회원가입
+  * Kakao Login API를 이용한 Kakao 로그인/회원가입 가능합니다.
+  * 일반회원과 Kakao회원을 회원정보 테이블의 USERTYPE으로 구분하였습니다.
+  
+![자공자 카카오로그인](https://user-images.githubusercontent.com/105340836/197484726-d6df73f0-a42e-4a5b-9230-c33323a64482.gif)
+
+## 개선 사항
