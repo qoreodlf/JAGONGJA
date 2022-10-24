@@ -82,5 +82,5 @@
 
 
 
-
+### 이 프로젝트는 팀 프로젝트 시 프로젝트 구조와 레파지토리가 정리되지 않아 정리하여 작성한 프로젝트입니다. 팀 프로젝트 시 레파지토리는 [이곳](https://github.com/qoreodlf/KICTeamProject/tree/%EB%B0%B1%EB%8C%80%EC%9D%BC%EB%B0%B1%EC%97%85/teamProject)입니다
 
